@@ -1,0 +1,58 @@
+import { Button, VerticalBox, LineEdit } from "std-widgets.slint";
+
+
+
+
+export component AppWindow inherits Window {
+
+    in property <string> results: "";
+    callback devide-income(string);
+
+    background: #313e50;
+    GridLayout {
+        padding: 50px;
+        spacing: 25px;
+        Row {
+            Text {
+                text: "Enter Total Income: ";
+                horizontal-alignment: center;
+                font-size: 20px;
+                font-weight: 900;
+            }
+        }
+
+        Row {
+            income := LineEdit {
+                horizontal-alignment: center;
+                font-size: 16px;
+                placeholder-text: "Total Income";
+                input-type: number;
+                height: 35px;
+            }
+        }
+
+        Row {
+            Button {
+                text: "Calculate";
+                primary: true;
+                height: 35px;
+                clicked => {devide-income(income.text)}
+            }
+        }
+
+        Row {
+            VerticalBox {
+                Rectangle {
+                    height: 100px;
+                    background: #f2f2f2;
+                    Text {
+                        color: black;
+                        font-size: 16px;
+                        font-weight: 500;
+                        text: root.results;
+                    }
+                }
+            }
+        }
+    }
+}
