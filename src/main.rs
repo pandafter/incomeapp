@@ -7,6 +7,7 @@ const OPEXPER: f64 = 0.10;
 
 fn main() -> Result<(), slint::PlatformError> {
     let ui = AppWindow::new()?;
+
     let ui_handle = ui.as_weak();
     ui.on_devide_income(move |string| {
         let ui: AppWindow = ui_handle.unwrap();

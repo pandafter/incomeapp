@@ -2024,6 +2024,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "incomedivider-desktop"
+version = "0.1.0"
+dependencies = [
+ "slint",
+ "slint-build",
+]
+
+[[package]]
 name = "indexmap"
 version = "2.6.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3390,14 +3398,6 @@ dependencies = [
  "proc-macro2",
  "quote",
  "spin_on",
-]
-
-[[package]]
-name = "slint-rust-template"
-version = "0.1.0"
-dependencies = [
- "slint",
- "slint-build",
 ]
 
 [[package]]

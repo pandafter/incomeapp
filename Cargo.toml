@@ -1,10 +1,10 @@
 [package]
-name = "slint-rust-template"
+name = "incomedivider-desktop"
 version = "0.1.0"
+authors = ["Nicolas Leyva <nicolasleyvah@outlook.com>"]
 edition = "2021"
-description = "A desktop application for dividing income."
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+build = "build.rs"
+description = "A desktop application for dividing income"
 
 [dependencies]
 slint = "1.7.2"
@@ -12,7 +12,9 @@ slint = "1.7.2"
 [build-dependencies]
 slint-build = "1.7.2"
 
-
 [package.metadata.bundle]
-name = "Income Divider"
+name = "IncomeDivider"
 identifier = "io.github.pandafter.incomeapp"
+description = "A desktop application for dividing income"
+resources = ["D:/rust_project_1/incomeapp/target/release/slint-rust-template.exe"]
+
